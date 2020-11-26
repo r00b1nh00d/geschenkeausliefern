@@ -1,35 +1,68 @@
 # Geschenke ausliefern
 ## ~avatar avatar @unplugged
 gedulde dich noch ein wenig bis es soweit ist :-)
+input.onButtonPressed(Button.AB, function () {
+    Weihnachtsmann.move(2)
+    Runde += 1
+    if (Runde == 15) {
+        game.gameOver()
+    }
+    if (!(Sprite.isDeleted()) && Weihnachtsmann.isTouching(Sprite)) {
+        game.addScore(1)
+    }
+    if (!(Sprite.isDeleted()) && Weihnachtsmann.isTouching(Sprite2)) {
+        game.addScore(1)
+    }
+    if (!(Sprite3.isDeleted()) && Weihnachtsmann.isTouching(Sprite3)) {
+        game.addScore(1)
+    }
+    basic.pause(100)
+    Weihnachtsmann.move(-2)
+})
+let Runde = 0
+let Sprite3: game.LedSprite = null
+let Sprite2: game.LedSprite = null
+let Sprite: game.LedSprite = null
+let Weihnachtsmann: game.LedSprite = null
+Weihnachtsmann = game.createSprite(2, 2)
+Sprite = game.createSprite(4, 0)
+Sprite2 = game.createSprite(4, 0)
+Sprite3 = game.createSprite(4, 0)
+Sprite.turn(Direction.Left, 180)
+Sprite2.turn(Direction.Left, 180)
+Sprite3.turn(Direction.Left, 180)
+Weihnachtsmann.turn(Direction.Left, 90)
+basic.forever(function () {
+    if (Sprite.isDeleted()) {
+        if (randint(0, 10) == 4) {
+            Sprite = game.createSprite(4, 0)
+            Sprite.turn(Direction.Left, 180)
+        }
+    } else if (Sprite.get(LedSpriteProperty.X) == 0) {
+        Sprite.delete()
+    } else {
+        Sprite.move(1)
+    }
+    if (Sprite2.isDeleted()) {
+        if (randint(0, 10) == 4) {
+            Sprite2 = game.createSprite(4, 0)
+            Sprite2.turn(Direction.Left, 180)
+        }
+    } else if (Sprite2.get(LedSpriteProperty.X) == 0) {
+        Sprite2.delete()
+    } else {
+        Sprite2.move(1)
+    }
+    if (Sprite3.isDeleted()) {
+        if (randint(0, 10) == 4) {
+            Sprite3 = game.createSprite(4, 0)
+            Sprite3.turn(Direction.Left, 180)
+        }
+    } else if (Sprite3.get(LedSpriteProperty.X) == 0) {
+        Sprite3.delete()
+    } else {
+        Sprite3.move(1)
+    }
+    basic.pause(200)
+})
 
-
-> Diese Seite bei [https://r00b1nh00d.github.io/geschenkeausliefern/](https://r00b1nh00d.github.io/geschenkeausliefern/) öffnen
-
-## Als Erweiterung verwenden
-
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
-
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/r00b1nh00d/geschenkeausliefern** suchen und importieren
-
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/r00b1nh00d/geschenkeausliefern/workflows/MakeCode/badge.svg)
-
-Um dieses Repository in MakeCode zu bearbeiten.
-
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/r00b1nh00d/geschenkeausliefern** ein und klicke auf Importieren
-
-## Blockvorschau
-
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
-
-![Eine gerenderte Ansicht der Blöcke](https://github.com/r00b1nh00d/geschenkeausliefern/raw/master/.github/makecode/blocks.png)
-
-#### Metadaten (verwendet für Suche, Rendering)
-
-* for PXT/calliopemini
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
