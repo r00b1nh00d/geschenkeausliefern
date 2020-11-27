@@ -74,7 +74,8 @@ basic.forever(function () {
 ```
 
 ## Schritt 4 
-Jetzt kannst du 
+Da sich jetzt alle Sprites so bewegen wie sie sollen kannst du nun die Spielregeln Programmieren. Diese kommen ebenfalls in den ``||input: wenn knopf A+B gedrückt||``. Genauer gesagt zwischen die Blöcke in denen sich der Weihnachtsmann nach oben und wieder nach unten bewegen soll. Hier kannst du eine Variable ``||varibale: Runden||`` um eins erhöhen und anschließend gleich testen ob diese den Wert 15 erreicht wodurch das Spiel beendet werden soll. <br>
+Ebenso soll geprüft werden, ob der Weihnachtsmann ein Sprite berührt (solang der Sprite noch nicht gelöscht wurde). Ist dies erfüllt soll ein Punkt vergeben werden.
 
 
 ```blocks
