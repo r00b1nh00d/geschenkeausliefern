@@ -6,7 +6,7 @@ Auch der Weihnachtsmann hatte mit den wild gewordenen Elfen viel zu tun und hat 
 
 
 ## ~ @unplugged
-Jetzt musst du ihm dabei helfen die Geschenke auszuliefern. 
+Jetzt musst du ihm dabei helfen die Geschenke auszuliefern. <br>
 ![Geschenkeverteilen](https://github.com/r00b1nh00d/geschenkeausliefern/blob/master/GeschenkeAusliefern.gif?raw=true)
 
 ## Schritt 1
