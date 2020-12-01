@@ -188,4 +188,4 @@ basic.forever(function () {
 
 
 ## ~ @unplugged
-Jetzt hast du am oberen Bildschirmrand eine zufällige Abfolge von bis zu 3 Sprites. Dies simuliert eine Häuserreihe an der du vorbeifährst. Wenn du nun Beide Knöpfe drückst bewegt sich der Weihnachtsmann nach oben. Trifft er auf ein Haus gilt das Geschenk als ausgeliefert.
+Jetzt hast du am oberen Bildschirmrand eine zufällige Abfolge von bis zu 3 Sprites. Dies simuliert eine Häuserreihe, an der du vorbeifährst. Wenn du nun beide Knöpfe drückst, bewegt sich der Weihnachtsmann nach oben. Trifft er auf ein Haus, gilt das Geschenk als ausgeliefert.
