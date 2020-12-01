@@ -1,17 +1,17 @@
 # Geschenke ausliefern
 ## ~avatar avatar @unplugged
-Du bist am Nordpol angekommen der Weihnachtsmann braucht nun deine Hilfe. <br>
-Auch der Weihnachtsmann hatte mit den wild gewordenen Elfen viel zu tun und hat jetzt angst die Gechenke nicht rechtzeitig ausliefern zu können.
+Du bist am Nordpol angekommen, der Weihnachtsmann braucht nun deine Hilfe. <br>
+Auch der Weihnachtsmann hatte mit den wildgewordenen Elfen viel zu tun und hat jetzt Angst, die Geschenke nicht rechtzeitig ausliefern zu können.
 
 
 
 ## ~ @unplugged
-Jetzt musst du ihm dabei helfen die Geschenke auszuliefern. <br>
+Jetzt musst du ihm dabei helfen, die Geschenke auszuliefern. <br>
 ![Geschenkeverteilen](https://github.com/r00b1nh00d/geschenkeausliefern/blob/master/GeschenkeAusliefern.gif?raw=true)
 
 ## Schritt 1
-Ertelle ``||basic:beim Start||`` einen ``||variable:sprite||`` an der ``||game:Stelle (0,4)||``. <br>
-Seine ``||game:Richtung||`` muss nun nach links gedreht werden. <br>
+Erstelle ``||basic:beim Start||`` eine ``||variables:sprite||`` an der ``||game:Stelle (0,4)||``. <br>
+Die ``||game:Richtung||`` des Sprites muss nun nach links gedreht werden. <br>
 
 ```blocks
 let Sprite: game.LedSprite = game.createSprite(4, 0)
@@ -20,9 +20,9 @@ Sprite.turn(Direction.Left, 180)
 
 ## Schritt 2
 In einer ``||basic:dauerhaft||`` - Schleife soll mittels ``||logic: wenn - dann||`` - Bedinugung zuerst geprüft werden, ob der Sprite gelöscht wurde. <br>
-Wurde er gelöscht, soll nochmal mittels ``||logic: wenn - dann||`` - Bedinugung geprüft werden ob sich eine Zufallsvariable erfüllt. Ist diese auch erfüllt soll ein neuer Sprite an der Stelle, mit der selben Ausrichtung wie beim Start erstellt werden. Ist der Sprite ``||logic:nicht||`` ``||game: gelöscht||`` soll geprüft werden, ob der Sprite die Stelle x = 0 erreicht hat. <br>
-Ist er an dieser Stelle soll er ``||game: gelöscht||`` werden. <br>
-Trifft keine der Beiden Bedingungen zu soll der ``||game:Sprite bewegt||`` werden und der Calliope kurz ``||basic:pausieren||``. <br>
+Wurde er gelöscht, soll nochmal mittels ``||logic: wenn - dann||`` - Bedingung geprüft werden, ob sich eine Zufallsvariable erfüllt hat. Ist diese auch erfüllt, soll ein neuer Sprite an der Stelle mit der selben Ausrichtung wie beim Start erstellt werden. Ist der Sprite ``||logic:nicht||`` ``||game: gelöscht||`` soll geprüft werden, ob der Sprite die Stelle x = 0 erreicht hat. <br>
+Ist er an dieser Stelle, soll er ``||game: gelöscht||`` werden. <br>
+Trifft keine der beiden Bedingungen zu, soll der ``||game:Sprite bewegt||`` werden und der Calliope kurz ``||basic:pausieren||``. <br>
 **Jetzt sollte ein Sprite von rechts nach links wandern**
 ```blocks
 let Sprite: game.LedSprite = game.createSprite(4, 0)
@@ -45,7 +45,7 @@ basic.forever(function () {
 ``` 
 
 ## Schritt 3
-Erstelle nun einen weitern Sprite namens  ``||variables:Weihnachtsmann||`` . Dieser soll beim Drücken der beiden ``||input:Tasten A und B||`` um 2 Pixel nach oben bewegt werden, nach einer kurzen Pause soll er wieder zurück an die ursprüngliche Position. 
+Erstelle nun einen weiteren Sprite namens  ``||variables:Weihnachtsmann||``. Dieser soll beim Drücken der beiden ``||input:Tasten A und B||`` um 2 Pixel nach oben bewegt werden. Nach einer kurzen Pause soll er wieder zurück an die ursprüngliche Position bewegt werden. 
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
@@ -74,8 +74,8 @@ basic.forever(function () {
 ```
 
 ## Schritt 4 
-Da sich jetzt alle Sprites so bewegen wie sie sollen kannst du nun die Spielregeln Programmieren. Diese kommen ebenfalls in den ``||input: wenn knopf A+B gedrückt||``. Genauer gesagt zwischen die Blöcke in denen sich der Weihnachtsmann nach oben und wieder nach unten bewegen soll. Hier kannst du eine Variable ``||varibales: Runden||`` um eins erhöhen und anschließend gleich testen ob diese den Wert 15 erreicht wodurch das Spiel beendet werden soll. <br>
-Ebenso soll geprüft werden, ob der Weihnachtsmann ein Sprite berührt (solang der Sprite noch nicht gelöscht wurde). Ist dies erfüllt soll ein Punkt vergeben werden.
+Da sich jetzt alle Sprites so bewegen wie sie sollen, kannst du nun die Spielregeln programmieren. Diese kommen ebenfalls in den ``||input: wenn knopf A + B gedrückt||`` Block, genauer gesagt zwischen die Blöcke, in denen sich der Weihnachtsmann nach oben und wieder nach unten bewegen soll. Du kannst eine Variable namens ``||varibales: Runden||`` erstellen. Diese soll um eins erhöht werden und anschließend soll geprüft werden, ob diese den Wert 15 erreicht hat. Ist die 15 erreicht, soll das Spiel beendet werden. <br>
+Ebenso soll geprüft werden, ob der Weihnachtsmann ein Sprite berührt (solange der Sprite noch nicht gelöscht wurde). Ist beides erfüllt, soll ein Punkt vergeben werden.
 
 
 ```blocks
@@ -117,7 +117,7 @@ basic.forever(function () {
 
 
 ## Schritt 5
-Zum Abschluss kannst du alles, was du mit den Sprite Programmiert hast duplizieren und noch für zwei weitere Sprites umschreiben.
+Zum Abschluss kannst du alles, was du mit dem Sprite programmiert hast, duplizieren und noch für zwei weitere Sprites umschreiben.
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
