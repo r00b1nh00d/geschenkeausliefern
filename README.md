@@ -10,7 +10,7 @@ Jetzt musst du ihm dabei helfen, die Geschenke auszuliefern. <br>
 ![Geschenkeverteilen](https://github.com/r00b1nh00d/geschenkeausliefern/blob/master/GeschenkeAusliefern.gif?raw=true)
 
 ## Schritt 1
-Erstelle ``||basic:beim Start||`` eine ``||variables:sprite||`` an der ``||game:Stelle (0,4)||``. <br>
+Erstelle ``||basic:beim Start||`` einen ``||variables:sprite||`` an der ``||game:Stelle (0,4)||``. <br>
 Die ``||game:Richtung||`` des Sprites muss nun nach links gedreht werden. <br>
 
 ```blocks
@@ -74,7 +74,7 @@ basic.forever(function () {
 ```
 
 ## Schritt 4 
-Da sich jetzt alle Sprites so bewegen wie sie sollen, kannst du nun die Spielregeln programmieren. Diese kommen ebenfalls in den ``||input: wenn knopf A + B gedrückt||`` Block, genauer gesagt zwischen die Blöcke, in denen sich der Weihnachtsmann nach oben und wieder nach unten bewegen soll. Du kannst eine Variable namens ``||varibales: Runden||`` erstellen. Diese soll um eins erhöht werden und anschließend soll geprüft werden, ob diese den Wert 15 erreicht hat. Ist die 15 erreicht, soll das Spiel beendet werden. <br>
+Da sich jetzt alle Sprites so bewegen wie sie sollen, kannst du nun die Spielregeln programmieren. Diese kommen ebenfalls in den ``||input: wenn knopf A + B gedrückt||`` Block, genauer gesagt zwischen die Blöcke, in denen sich der Weihnachtsmann nach oben und wieder nach unten bewegen soll. Du kannst eine Variable namens ``||variables:Runden||`` erstellen. Diese soll um eins erhöht werden und anschließend soll geprüft werden, ob diese den Wert 15 erreicht hat. Ist die 15 erreicht, soll das Spiel beendet werden. <br>
 Ebenso soll geprüft werden, ob der Weihnachtsmann ein Sprite berührt (solange der Sprite noch nicht gelöscht wurde). Ist beides erfüllt, soll ein Punkt vergeben werden.
 
 
